@@ -42,6 +42,29 @@ const inputSetter = () => {
     })
 }
 
+const splicer = (event) => {
+    let evalValue = new entryConstructor(event.target.parentElement.firstElementChild.firstElementChild.textContent, 
+        event.target.parentElement.firstElementChild.firstElementChild.nextSibling.nextSibling.textContent);
+
+    entryList.forEach(entry => {
+        entry.title === evalValue.title && entry.description === evalValue.description ?
+            entryList.splice(entryList.indexOf(entry), 1) : null
+    })
+}
+
+const handleDelete = () => {
+    const deleteButtons = document.querySelectorAll('.remove-entry');
+
+    deleteButtons.forEach((deletebutton) => {
+        deletebutton.addEventListener('click', (event) => {
+
+            splicer(event);
+            
+            event.target.parentElement.remove();
+        })
+    })
+}
+
 let entryList = [];
 
 handleRedirect[0].addEventListener('submit', (event) => {
@@ -57,15 +80,7 @@ handleRedirect[0].addEventListener('submit', (event) => {
     entryList.forEach(entry => {
         handleRedirect[1].innerHTML += htmlTemplate(entry);
 
-        const handleDelete = document.querySelectorAll('.remove-entry');
-
-        handleDelete.forEach((deletebutton, index) => {
-            deletebutton.addEventListener('click', (event) => {
-                entryList.splice(index, 1);
-                console.log(entryList, index);
-                event.target.parentElement.remove();
-            })
-        })
+        handleDelete();
     })
 });
 

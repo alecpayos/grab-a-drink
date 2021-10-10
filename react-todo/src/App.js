@@ -10,9 +10,9 @@ const App = () => {
       <Styled.BG_ELLIPSE_RIGHT></Styled.BG_ELLIPSE_RIGHT>
       <Styled.Form>
         <Styled.Input className="input" required placeholder="Title" 
-          onChange={eventHandlers.handleInput} defaultValue=""></Styled.Input>
+          onChange={eventHandlers.handleInput}></Styled.Input>
         <Styled.Textarea className="textarea" required placeholder="Description" 
-          onChange={eventHandlers.handleInput} defaultValue=""></Styled.Textarea>
+          onChange={eventHandlers.handleInput}></Styled.Textarea>
         <Styled.Button>Add Todo</Styled.Button>
       </Styled.Form>
     </Styled.Container>
