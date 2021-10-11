@@ -92,19 +92,23 @@ body {
     box-shadow: 0 1
     px 3px 1px #ABABAB;
 }
-.buttons-container {
-    display: flex;
-    flex-direction: column;
+@keyframes hover {
+    from {transform: scale(2);}
+    to {transform: scale(2.3);}
 }
-.remove-entry, .edit-entry {
+.fa-trash-alt, .fa-edit {
     font: bold 16px 'Roboto', sans-serif;
-    padding: 8px 16px;
-    margin: 4px 0;
-    background-image: linear-gradient(45deg, #d9596e, #cf304a);
-    color: #EFEFEF;
+    padding: 4px 8px;
+    margin: 0 8px;
+    color: #cf304a;
     border: none;
     border-radius: 3px;
+    transform: scale(2);
+
 }
-.remove-entry:hover, .edit-entry:hover, .back:hover {
+.fa-trash-alt:hover, .fa-edit:hover {
+    animation: hover 0.1s linear forwards;
+}
+.back:hover {
     background-image: linear-gradient(160deg, #d9596e, #cf304a);
 }

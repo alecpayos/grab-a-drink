@@ -16,8 +16,8 @@ const htmlTemplate = (entry) => {
                     <p>${entry.description}</p>
                 </div>  
                 <div class="buttons-container">
-                    <button class="edit-entry">Edit Entry</button>
-                    <button class="remove-entry">Delete Entry</button>
+                    <i class="far fa-edit"></i>
+                    <i class="far fa-trash-alt"></i>
                 </div>
             </div>`
 }
@@ -51,7 +51,7 @@ const render = {
 
 
 const handleEdit = (event) => {
-    const editButtons = document.querySelectorAll('.edit-entry');
+    const editButtons = document.querySelectorAll('.fa-edit');
 
     editButtons.forEach(button => {
         button.addEventListener('click', (event) => {
@@ -132,7 +132,7 @@ const splicer = (event) => {
 }
 
 const handleDelete = () => {
-    const deleteButtons = document.querySelectorAll('.remove-entry');
+    const deleteButtons = document.querySelectorAll('.fa-trash-alt');
 
     deleteButtons.forEach((deletebutton) => {
         deletebutton.addEventListener('click', (event) => {
