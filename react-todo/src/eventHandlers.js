@@ -1,6 +1,8 @@
 const eventHandlers = {
-    "handleInput": function (event) {
-        
+    "handleInputs": function (event) {
+        event.preventDefault();
+        const [ title, description ] = [...document.querySelectorAll('.input, .textarea')];
+        console.log(title.value, description.value);
     },
     
     "handleValues": function () {
