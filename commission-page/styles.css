@@ -1,7 +1,44 @@
 :root {
+    /* Global Settings */
     --card-info-color: #EFEFEF;
     --card-info-shadow: 0 3px 4px #7F7F7F;
     --balls-shadow: -4px 8px 16px 0 #EDB88C;
+
+    /* Global Font Settings */
+    --hero-font-family: 'Dancing Script', cursive;
+    --hero-font-weight: 700;
+    --button-font-family: 'Montserrat', sans-serif;
+    --button-font-weight: 600;
+
+    /* Mobile Settings */
+    --mobile-glass-frame-width: 20rem;
+    --mobile-glass-frame-height: 35rem;
+    --mobile-auth-frame-width: 5rem;
+    --mobile-hero-width: 25vw;
+    --mobile-hero-height: 35vh;
+    --mobile-font-size: max(48px, 3.1vw);
+    --mobile-button-font-size: 20px;
+
+    /* Tablet Settings */
+    --tablet-glass-frame-width: 35rem;
+    --tablet-glass-frame-height: 20rem;
+    --tablet-auth-frame-height: 4rem;
+
+    --tablet-hero-width: 55vw;
+    --tablet-hero-height: 35vw;
+    --tablet-hero-font-size: max(72px, 5.1vw);
+    --tablet-font-size: max(72px, 5.1vw);
+    --tablet-button-font-size: 20px;
+
+    /* Desktop Settings */
+    --desktop-glass-frame-width: 45rem;
+    --desktop-glass-frame-height: 25rem;
+    --desktop-auth-frame-height: 5rem;
+    --desktop-hero-width: 40vw;
+    --desktop-hero-height: 35vh;
+    --desktop-font-size: max(92px, 6.1vw);
+    --desktop-button-font-size: 24px;
+
 }
 body {
     margin: 0;
@@ -17,96 +54,235 @@ body {
     flex-direction: inherit;
     justify-content: center;
     align-items: center;
+    z-index: -2;
+}
+@keyframes rotate-in {
+    0% {transform: rotate(90deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes sizer {
+    from {}
+}
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    .frame {
+        animation: rotate-in 0.7s linear;
+        animation-fill-mode: initial;
+        -webkit-animation-fill-mode: initial;
+    }
+    .glass-frame, .frame, .auth-frame {
+        min-width: var(--mobile-glass-frame-width);
+        min-height: var(--mobile-glass-frame-height);
+    }
+    .auth-frame {
+        right: 0;
+        min-width: var(--mobile-auth-frame-width);
+        border-radius: 0 32px 32px 0;
+    }
+    .hero {
+        width: var(--mobile-hero-width);
+        height: var(--mobile-hero-height);
+    }
+    .hero h1 {
+        font-size: var(--mobile-font-size);
+    }
+    .hero button {
+        padding: 8px 24px;
+        font-size: var(--mobile-button-font-size);
+        font-family: var(--button-font-family);
+        font-weight: var(--button-font-weight);
+    }
+    .overhead-one, .overhead-two {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1079px) {
+    .glass-frame, .frame, .auth-frame {
+        min-width: var(--tablet-glass-frame-width);
+        min-height: var(--tablet-glass-frame-height);
+        width: var(--tablet-glass-frame-width);
+        height: var(--tablet-glass-frame-height);
+    }
+    .auth-frame {
+        height: var(--tablet-auth-frame-height);
+        min-height: var(--tablet-auth-frame-height);
+        border-radius: 0 0 32px 32px;
+    }
+    .hero {
+        width: var(--tablet-hero-width);
+        height: var(--tablet-hero-height);
+    }
+    .hero h1 {
+        font-size: var(--tablet-font-size);
+    }
+    .hero button {
+        padding: 12px 36px;
+        font-size: var(--tablet-button-font-size);
+        font-family: var(--button-font-family);
+        font-weight: var(--button-font-weight);
+    }
+    .overhead-one, .overhead-two {
+        width: 40rem;
+        height: 40rem;
+    }
+}
+@media screen and (min-width: 1080px) and (max-width: 1439px) {
+    .overhead-one, .overhead-two {
+        width: 55rem;
+        height: 55rem;
+    }
+    .glass-frame, .frame, .auth-frame {
+        min-width: var(--desktop-glass-frame-width);
+        min-height: var(--desktop-glass-frame-height);
+    }
+    .auth-frame {
+        height: var(--desktop-auth-frame-height);
+        min-height: var(--desktop-auth-frame-height);
+        border-radius: 0 0 32px 32px;
+    }
+    .hero {
+        width: var(--desktop-hero-width);
+        height: var(--desktop-hero-height);
+    }
+    .hero h1 {
+        font-size: var(--desktop-font-size);
+    }
+    .hero button {
+        padding: 12px 40px;
+        font-size: var(--desktop-button-font-size);
+    }
+}
+@media screen and (min-width: 1440px) {
+    .glass-frame, .frame, .auth-frame {
+        min-width: var(--desktop-glass-frame-width);
+        min-height: var(--desktop-glass-frame-height);
+    }
+    .auth-frame {
+        height: var(--desktop-auth-frame-height);
+        min-height: var(--desktop-auth-frame-height);
+        border-radius: 0 0 32px 32px;
+    }
+    .hero {
+        width: var(--desktop-hero-width);
+        height: var(--desktop-hero-height);
+    }
+    .hero h1 {
+        font-size: var(--desktop-font-size);
+    }
+    .hero button {
+        padding: 12px 40px;
+        font-size: var(--desktop-button-font-size);
+    }
+    .overhead-one, .overhead-two {
+        width: 70rem;
+        height: 70rem;
+    }
 }
 .glass-frame {
-    min-width: 420px;
-    min-height: 280px;
-    width: 45vw;
-    height: 25vw;
     position: absolute;
     background-image: linear-gradient(45deg, #EAEAEA, #EDEDED);
-    opacity: 30%;
-    border-radius: 50px;
+    opacity: 35%;
+    border-radius: 32px;
     border: 2px solid white;
     z-index: 1;
 }
 .frame {
-    min-width: 420px;
-    min-height: 280px;
-    width: 45vw;
-    height: 25vw;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.button-frame {
-    min-width: 420px;
-    min-height: 60px;
-    width: 45vw;
-    height: 5vw;
+.auth-frame {
     position: absolute;
     bottom: 0;
     background-image: linear-gradient(145deg, #52A2E4 60%, #268ADD);
-    border-radius: 0 0 50px 50px;
-    z-index: 2;
+    z-index: 1;
+}
+.displays img {
+    position: absolute;
+    opacity: 60%;
+    z-index: 1;
+}
+.overhead-one, .overhead-two {
+    position: fixed;
+    background-color: #F4D3B8;
+    border-radius: 50%;
+    z-index: -1;
+}
+.overhead-one {
+    left: -30%;
+    top: 10%;
+}
+.overhead-two {
+    bottom: 30%;
+    left: 70%;
+}
+#cookie-one {
+    transform: scale(0.2);
+}
+#cookie-two {
+    transform: scale(0.3);
+}
+#cookie-three {
+    transform: scale(0.5);
 }
 #one, #two, #three {
-    min-width: 144px;
-    min-height: 145.35px;
-    width: 7.5vw;
-    height: 15vh;
     background-image: linear-gradient(145deg, #F4D3B8, #e7a267);
-    box-shadow: var(--balls-shadow);
     position: absolute;
     z-index: 1;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #one {
-    left: 40%;
-    top: 16%;
-    z-index: 0;
+    width: 7.3rem;
+    height: 7.3rem;
+    left: 45%;
+    top: 18%;
 }
 #two {
-    left: 20%;
-    top: 52%;
-    z-index: 0;
+    width: 11rem;
+    height: 11rem;
+    left: 22%;
+    top: 55.5%;
 }
 #three {
-    right: 20%;
-    top: 33%;
+    width: 18rem;
+    height: 18rem;
+    right: 16%;
+    top: 34.3%;
+    z-index: 0;
 }
 .hero {
     display: inherit;
     flex-direction: inherit;
     align-items: inherit;
-    min-width: 25vw;
-    width: 35vw;
-    height: 35vh;
     z-index: 2;
 }
 .hero h1 {
-    font: 700 6.1vw 'Dancing Script', cursive;
-    margin: 1.8vw 0 0 0;
+    margin: 2.5vw 0 0 0;
     color: var(--card-info-color);
-    text-shadow: var(--card-info-shadow)
+    text-shadow: var(--card-info-shadow);
+    font-family: var(--hero-font-family);
+    font-weight: var(--hero-font-weight);
 }
 .hero h4 {
-    margin-top: 0.521vw;
-    font: bold .9375vw 'Roboto', sans-serif;
+    margin-top: 0;
+    font: bold 16px 'Montserrat', sans-serif;
     color: var(--card-info-color);
-    text-shadow: var(--card-info-shadow)
+    text-shadow: var(--card-info-shadow);
 }
 .hero button {
-    padding: 12px 40px;
     position: relative;
-    top: 17%;
+    top: 15%;
     border: none;
     border-radius: 32px;
     background-image: linear-gradient(145deg, #27d846, #25cd43);
-    box-shadow: 0 4px 8px 0 #1fa937;
-    color: #CECECE;
-    font: bold 24px 'Montserrat', sans-serif;
+    box-shadow: 0 2px 8px 0 #1fa937;
+    color: #ECECEC;
+    font-family: 'Nova Mono', monospace;
+    font-weight: 600;
 }
 .hero button:hover {
     top: 17.5%;
