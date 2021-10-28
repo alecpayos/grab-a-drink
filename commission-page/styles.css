@@ -1,0 +1,114 @@
+:root {
+    --card-info-color: #EFEFEF;
+    --card-info-shadow: 0 3px 4px #7F7F7F;
+    --balls-shadow: -4px 8px 16px 0 #EDB88C;
+}
+body {
+    margin: 0;
+    font: 36px 'Oswlad', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #b8d9f4, #8CC1ED);
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
+}
+.glass-frame {
+    min-width: 420px;
+    min-height: 280px;
+    width: 45vw;
+    height: 25vw;
+    position: absolute;
+    background-image: linear-gradient(45deg, #EAEAEA, #EDEDED);
+    opacity: 30%;
+    border-radius: 50px;
+    border: 2px solid white;
+    z-index: 1;
+}
+.frame {
+    min-width: 420px;
+    min-height: 280px;
+    width: 45vw;
+    height: 25vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-frame {
+    min-width: 420px;
+    min-height: 60px;
+    width: 45vw;
+    height: 5vw;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(145deg, #52A2E4 60%, #268ADD);
+    border-radius: 0 0 50px 50px;
+    z-index: 2;
+}
+#one, #two, #three {
+    min-width: 144px;
+    min-height: 145.35px;
+    width: 7.5vw;
+    height: 15vh;
+    background-image: linear-gradient(145deg, #F4D3B8, #e7a267);
+    box-shadow: var(--balls-shadow);
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+}
+#one {
+    left: 40%;
+    top: 16%;
+    z-index: 0;
+}
+#two {
+    left: 20%;
+    top: 52%;
+    z-index: 0;
+}
+#three {
+    right: 20%;
+    top: 33%;
+}
+.hero {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    min-width: 25vw;
+    width: 35vw;
+    height: 35vh;
+    z-index: 2;
+}
+.hero h1 {
+    font: 700 6.1vw 'Dancing Script', cursive;
+    margin: 1.8vw 0 0 0;
+    color: var(--card-info-color);
+    text-shadow: var(--card-info-shadow)
+}
+.hero h4 {
+    margin-top: 0.521vw;
+    font: bold .9375vw 'Roboto', sans-serif;
+    color: var(--card-info-color);
+    text-shadow: var(--card-info-shadow)
+}
+.hero button {
+    padding: 12px 40px;
+    position: relative;
+    top: 17%;
+    border: none;
+    border-radius: 32px;
+    background-image: linear-gradient(145deg, #27d846, #25cd43);
+    box-shadow: 0 4px 8px 0 #1fa937;
+    color: #CECECE;
+    font: bold 24px 'Montserrat', sans-serif;
+}
+.hero button:hover {
+    top: 17.5%;
+    box-shadow: 0 2px 4px 0 #1fa937;
+}
