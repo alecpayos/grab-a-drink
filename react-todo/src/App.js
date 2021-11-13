@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AddTodo from "./AddTodo";
-import Navbar from './Navbar';
-import ViewTodo from './ViewTodos';
+import { useState } from "react";
+import Styled from "./App.styles";
+import eventHandlers from "./eventHandlers";
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<ViewTodo />} />
-        <Route path="/add-todo" element={<AddTodo />} />
-      </Routes>
-    </Router>
+    <Styled.Container>
+      <Styled.BG_ELLIPSE_RIGHT></Styled.BG_ELLIPSE_RIGHT>
+      <Styled.Form onSubmit={eventHandlers.handleInputs}>
+        <Styled.Input className="input" required placeholder="Title"></Styled.Input>
+        <Styled.Textarea className="textarea" required placeholder="Description"></Styled.Textarea>
+        <Styled.Button>Add Todo</Styled.Button>
+      </Styled.Form>
+    </Styled.Container>
   );
 }
  
