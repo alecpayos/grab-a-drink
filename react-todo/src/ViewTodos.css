@@ -1,0 +1,17 @@
+.sample {
+    width: 35%;
+    color: #208CDF;
+    margin: 0 32.5%;
+    position: absolute;
+    top: 20%;
+    padding: 0 32px;
+    border: 1px solid gray;
+    border-radius: 32px;
+}
+.sample:hover {
+    box-shadow: 4px 4px 8px 0 #D0D0D0;
+    background: none;
+}
+.sample h2 {
+    margin-bottom: -3%;
+}

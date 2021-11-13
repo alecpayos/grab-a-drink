@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grab a Drink!</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&family=Open+Sans:wght@300;600;800&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.15752-9/234442401_168723678698088_6824509519794723789_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE8zs6o4qlpUTr0syly9_2Fjq5v0Y9hNI-Orm_Rj2E0jybSCsBLpgGmv9X5VMERLfeYeBX6sgIUGUJJ5T4mWbLj&_nc_ohc=KoOEsiRQWw0AX_-iluM&_nc_ht=scontent.fceb2-1.fna&oh=578a8bc6428ec2cf3165aef021f3ee26&oe=6141B685">
+    <script src="https://kit.fontawesome.com/6ab75e7019.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="otp-and-membership-wrapper">
+            <div id="otp-message" class="overlay-contents no-display">
+                Since this is a one-time purchase, you are not entitled to discounts
+            </div>
+            <div class="omw-button no-display">I understand.</div>
+            <div class="overlay-contents no-display">
+                Thank you for subscribing to Grab a Drink! To show our gratitude, you are granted a 10% discount for every item purchased.
+            </div>
+            <div class="omw-button no-display">Proceed to Shop</div>
+            <div class="overlays no-display"></div>
+        </div>
+        <div class="contact-wrapper">
+            <div class="about-us">
+                <div id="about-text">About us</div>
+                <div id="first-paragraph" class="about-context"><strong class="bigger">In a pandemic-laden year</strong>, we have seen people go out to the streets to get some drinks – risking infection to have a bit of fun. Even when a liquor ban wasimplemented in our city, people broke the law and purchased spirits from the black market.</div>
+                <div id="second-paragraph" class="about-context">With the COVID-19 outbreak causing obsolescence to nightclubs and resto-bars, Grab a Drink offers a leeway for consumers to get their drinks without violating social distancing. <strong class="bigger">As an enterprise dedicated to selling liquor using a digital platform</strong>, this means that every adult could satisfy its carnal need of drinking under his home – a safe space for every individual. Grab a Drink also helps out the club industry, as we get our drinks from local bars.</div>
+                <div id="third-paragraph" class="about-context">Along with the emergence of e-commerce in our country, the liquor industry should also digitize the liquor market. <strong class="bigger">Grab a Drink is a trailblazer as it is the first application that offers this kind of service in our country</strong>. We believe that more bars would see the potential of Grab a Drink and follow our footsteps which would allow the liquor industry to go digital.</div>
+                <div id="to-main-button">Get started<i class="fas fa-arrow-right"></i></div>
+            </div>
+            <div class="contact-us"></div>
+            <div class="delivery-info"></div>
+            <div class="terms-of-use"></div>
+            <div class="privacy-policy"></div>
+        </div>
+        <div class="main-wrapper">
+            <div class="header">
+                <img class="gad-logo" src="https://z-p3-scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/234442401_168723678698088_6824509519794723789_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE8zs6o4qlpUTr0syly9_2Fjq5v0Y9hNI-Orm_Rj2E0jybSCsBLpgGmv9X5VMERLfeYeBX6sgIUGUJJ5T4mWbLj&_nc_ohc=KoOEsiRQWw0AX-Cxpqa&_nc_ht=z-p3-scontent.fceb1-2.fna&oh=87561fab4f09f0398fbef17a89751bac&oe=6141B685" alt="gad logo">
+                <div class="home-bar">
+                    <button class="homebar-buttons init">Home</button>
+                    <button class="homebar-buttons">Membership</button>
+                    <button class="homebar-buttons">Shop</button>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <label for="search"></label>
+                    <input type="text" name="search" id="search" maxlength="25">
+                    <i class="far fa-user-circle"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <div class="cart-icon-counter"></div>
+                </div>
+            </div>
+            <div class="home-content">
+                <img class="liquor-bg" src="./assets/gad bg.png" alt="liquor background">
+                <div class="content content-div-position">
+                    <div class="context">
+                        <img class="main-context" src="https://z-p3-scontent.fceb1-3.fna.fbcdn.net/v/t1.15752-9/237260867_358758219162773_6814842945336195306_n.png?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHwGHWPX01fbiLBX5oD2AuPlQ9KYfM1_byVD0ph8zX9vNR_o-eNdqMyAg3HLejE6vPro5J8wKuOmSLJWAK12dxM&_nc_ohc=oGs8UfSXBz4AX8-I8cY&_nc_ht=z-p3-scontent.fceb1-3.fna&oh=f1d65c95a03bd05a3e97cd569113bc50&oe=61429158" alt="click and drink">
+                        <p class="support-context">wherever. whenever.</p>
+                    </div>
+                    <div class="one-time">
+                        <label for="otp"></label>
+                        <input type="submit" name="otp" class="otp" value="one-time purchase only">
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <button class="contact-info-buttons">About Us</button>
+                    <button class="contact-info-buttons">Contact Us</button>
+                    <button class="contact-info-buttons">Delivery Info</button>
+                    <button class="contact-info-buttons">Terms of Use</button>
+                    <button class="contact-info-buttons">Privacy Policy</button>
+                </div>
+            </div>
+        </div>
+        <div class="sub-wrapper">
+            <div class="login-container">
+                <div class="overlay"></div>
+                <form class="login">
+                    <i class="fas fa-times"></i>
+                    <img id="gad-login" class="gad-logo" src="https://z-p3-scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/234442401_168723678698088_6824509519794723789_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE8zs6o4qlpUTr0syly9_2Fjq5v0Y9hNI-Orm_Rj2E0jybSCsBLpgGmv9X5VMERLfeYeBX6sgIUGUJJ5T4mWbLj&_nc_ohc=KoOEsiRQWw0AX-Cxpqa&_nc_ht=z-p3-scontent.fceb1-2.fna&oh=87561fab4f09f0398fbef17a89751bac&oe=6141B685" alt="gad logo">
+                    <div class="login-context">LOG IN</div>
+                    <div class="inputs-line">
+                        <i class="fas fa-user"></i>
+                        <label for="username"></label>
+                        <input type="text" name="username" class="inputs" placeholder="Username">
+                    </div>
+                    <div class="inputs-line">
+                        <i class="fas fa-lock"></i>
+                        <label for="password"><i class="far fa-eye"></i></label>
+                        <input type="password" name="password" class="inputs" placeholder="Password">
+                    </div>
+                    <div class="remember">
+                        <label class="remember-me" for="remember-me">
+                            <input type="checkbox" name="remember-me" class="remember-me">Remember Me
+                        </label>
+                    </div>
+                    <div class="login-button-container">
+                        <label for="login-button"></label>
+                        <input type="submit" name="login-button" class="login-button" value="Login">
+                    </div>
+                    <div class="forgot">Forgot Password?</div>
+                    <div class="incoming no-display">This feature will be added sometime in the future. Thank you for understanding!</div>
+                </form>
+            </div>
+            <div class="membership-container membership-container-position">
+                <div class="membership-intro">Be a
+                    <div class="logo-container"><img id="membership-logo" class="gad-logo" src="https://z-p3-scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/234442401_168723678698088_6824509519794723789_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE8zs6o4qlpUTr0syly9_2Fjq5v0Y9hNI-Orm_Rj2E0jybSCsBLpgGmv9X5VMERLfeYeBX6sgIUGUJJ5T4mWbLj&_nc_ohc=KoOEsiRQWw0AX-Cxpqa&_nc_ht=z-p3-scontent.fceb1-2.fna&oh=87561fab4f09f0398fbef17a89751bac&oe=6141B685" alt="gad logo"></div> member now!
+                </div>              
+                <div class="discount-flag"> Enjoy Special Discounts and Promos!</div>
+                <div class="membership-form">
+                    <input class="membership-inputs" type="text" placeholder="Full Name" required>
+                    <input class="membership-inputs" type="text" placeholder="Email Address" required>
+                    <input class="membership-inputs" type="text" placeholder="Contact Number" required>
+                    <input class="membership-inputs" type="text" placeholder="Credit Card Number" required>
+                    <input class="membership-inputs" type="text" placeholder="Password" required>
+                </div>
+                <div>
+                    <input type="submit" name="membership-button" class="membership-button" value="REGISTER">
+                </div>
+            </div>
+        </div>
+        <div class="shop-wrapper shop-wrapper-position">
+            <div class="shop-mask"></div>
+            <img class="shop-background" src="https://z-p3-scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/240470272_199696408868077_1911431361602890043_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeF4WSmSXjcST5kPUP87gezL_M42SZqFsLz8zjZJmoWwvCYFiT_jM-CAQb4zwsFbo2cdJbSfK4JofAvwF2b-Bdxy&_nc_ohc=dFAPBHj3KxYAX8uAehY&_nc_ht=z-p3-scontent.fceb1-2.fna&oh=5777a7780d87a861df84bb8ecf610d18&oe=614B40B9" alt="">
+            <div class="shop-container">
+                <i class="far fa-arrow-alt-circle-left"></i>
+                <img id="gad-shop" class="gad-logo" src="https://z-p3-scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/234442401_168723678698088_6824509519794723789_n.png?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeE8zs6o4qlpUTr0syly9_2Fjq5v0Y9hNI-Orm_Rj2E0jybSCsBLpgGmv9X5VMERLfeYeBX6sgIUGUJJ5T4mWbLj&_nc_ohc=KoOEsiRQWw0AX-Cxpqa&_nc_ht=z-p3-scontent.fceb1-2.fna&oh=87561fab4f09f0398fbef17a89751bac&oe=6141B685" alt="">
+                <div class="liquor-highlight">
+                    <div class="highlight-container">
+                        <img src="https://z-p3-scontent.fceb1-2.fna.fbcdn.net/v/t1.15752-9/237433883_174032898134539_6065605090279927236_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeELX7XbrilV129BrJs5MAOriQWRL3VnQNqJBZEvdWdA2k255GKOw8OmFLSMd5MB1mt7PtXme9x_rv5kBy98T0YV&_nc_ohc=9yGVAmywSDEAX9dCXI1&_nc_ht=z-p3-scontent.fceb1-2.fna&oh=5515b426ffa8676cca532d55d4c11411&oe=614AD31D">
+                    </div>
+                </div>
+                <div class="liquor-content">
+                    <div class="liquor-content-header">
+                        <div class="liquor-tabs-container">
+                            <div class="cart">
+                                <i id="shop-cart-icon" class="fas fa-shopping-cart"></i>
+                                <div id="cart-counter" class="cart-icon-counter"></div>
+                            </div>
+                            <div class="liquor-tabs">CLEAR SPIRITS</div>
+                            <div class="liquor-tabs">DARK SPIRITS</div>
+                            <div class="liquor-tabs">SPECIAL SPIRITS</div>
+                        </div>
+                    </div>
+                    <div class="liquor-description"></div>
+                    <div class="alcohol-level"></div>
+                    <div class="price-box">
+                        <div class="price"></div>
+                        <div class="add-to-cart no-display">Add to Cart</div>
+                    </div>
+                    <div class="content-offers">
+                        <div class="first-offer display">PICK A CATEGORY</div>
+                        <div class="second-offer no-display">PICK A LIQUOR TO DISPLAY</div>
+                        <div class="images-container">
+                            <div class="liquor-image-containers"><img class="image"></div>
+                            <div class="liquor-image-containers"><img class="image"></div>
+                            <div class="liquor-image-containers"><img class="image"></div>
+                            <div class="liquor-image-containers"><img class="image"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-container-mask"></div>
+            </div>
+        </div>
+        <div class="cart-wrapper no-display">
+            <div class="checkout-overlay"></div>
+            <div class="checkout-form-overlay no-display">
+                <i id="overlay-arrow" class="fas fa-arrow-left"></i>
+                <div class="checkout-context">Checkout</div>
+                <input type="text" name="location" class="location" placeholder="Address">
+                <input type="number" name="location" class="contact-number" placeholder="Contact number">
+                <div class="payment-mode">
+                    <div class="cash">Cash</div>
+                    <div class="credit">Credit</div>
+                </div>
+                <div class="credit-card no-display">
+                    <input class="credit-field" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4">
+                    <input class="credit-field" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4">
+                    <input class="credit-field" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4">
+                    <input class="credit-field" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4">
+                </div>
+                <div class="discount-area"></div>
+                <div class="checkout-total"></div>
+                <div class="place-order">Place Order</div>
+            </div>
+            <div class="purchase-message no-display">Thank you for your purchase!<i id="final-message" class="fas fa-times"></i></div>
+            <div class="checkout-form">
+                <div class="checkout-header"><i class="fas fa-arrow-left"></i>My Cart</div>
+                <div class="checkout-content">
+                </div>
+                <div class="checkout-footer">
+                    <div class="total">₱ 0.00</div>
+                    <div class="checkout-button">Check Out</div>
+                </div>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script src="./functions.js"></script>
+</body>
+</html>
