@@ -8,3 +8,6 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True) 
+
+# https://www.instagram.com/mkyobera/
+# https://twitter.com/KevinsonMike
