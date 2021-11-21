@@ -39,17 +39,7 @@ const Styled = {
     outline: none;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 #8b8b8b inset;`,
-
-    "Button": styled.button`
-    padding: 8px 24px;
-    border-radius: 10px;
-    font: bold 16px 'Arial', sans-serif;
-    border: none;
-    background-image: linear-gradient(135deg, #15ea56, #10a93a);
-    color: #EFEFEF;
-    margin: 0 0 24px 0;
-    box-shadow: 0 0 5px 1px #12ba40;`
+    box-shadow: 0 0 10px 0 #8b8b8b inset;`
 }
  
 export default Styled;

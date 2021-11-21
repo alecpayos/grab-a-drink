@@ -1,13 +1,14 @@
+let todos = [];
+
 const eventHandlers = {
-    "handleInputs": function (event) {
+    "handleInputs": function(event) {
         event.preventDefault();
         const [ title, description ] = [...document.querySelectorAll('.input, .textarea')];
-        console.log(title.value, description.value);
-    },
-    
-    "handleValues": function () {
-
+        todos.push({ title: title.value, desc: description.value });
+        title.value = "";
+        description.value = "";
     }
 }
- 
+
+export { todos };
 export default eventHandlers;
