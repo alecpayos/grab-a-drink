@@ -1,12 +1,13 @@
-from flask import Flask, send_from_directory
-from flask_cors import CORS, cross_origin
+from flask import Flask, send_from_directory, render_template
 
-app = Flask(__name__, static_url_path='')
-CORS(app)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='build',
+            template_folder='build')
 
 @app.route('/')
 def home():
-    return send_from_directory('templates', 'index.html')
+    return render_template('index.html')
 
 @app.route('/header')
 def header():
