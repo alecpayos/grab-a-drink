@@ -62,7 +62,11 @@ body {
     font: 16px 'Oxygen', sans-serif;
 }
 .footer {
-    grid-template-columns: 20% 40% 40%;
+    grid-template-columns: minmax(3in, 20%) 40% 40%;
+}
+.hero img,
+.image {
+    opacity: 0.5;
 }
 
 /* Header Styles */
@@ -104,7 +108,6 @@ body {
 .hero img {
     height: 100vh;
     min-height: 10in;
-    opacity: 50%;
     filter: blur(4px);
 }
 .content {
@@ -143,7 +146,6 @@ body {
     background-color: #424242;
 }
 .image {
-    opacity: 50%;
     object-fit: cover;
 }
 
