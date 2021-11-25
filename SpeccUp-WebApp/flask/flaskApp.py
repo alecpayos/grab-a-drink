@@ -7,15 +7,15 @@ app = Flask(__name__,
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return "Welcome to the Server"
 
 @app.route('/header')
 def header():
     return send_from_directory('templates', 'header.html')
 
-@app.route('/content')
+@app.route('/intro-cards')
 def content():
-    return send_from_directory('templates', 'content.html')
+    return send_from_directory('templates', 'intro-cards.html')
 
 @app.route('/footer')
 def footer():
