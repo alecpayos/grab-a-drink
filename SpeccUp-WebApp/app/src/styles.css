@@ -16,11 +16,11 @@ body {
         height: 700px;
         min-height: 1in;
     }
-    .img-box {
-        box-shadow: 4px 4px 8px 0 #5c5c5c;
-    }
-    .img-box:hover {
-        animation: grow 0.2s linear forwards;
+    .content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
     }
 }
 @media screen and (min-width: 1601px) and (max-width: 1920px) {
@@ -34,19 +34,15 @@ body {
     }
 }
 @media screen and (min-width: 360px) and (max-width: 1024px) {
-    .content,
-    .content-container{
-        flex-direction: column;
-    }
-    .reverse {
-        flex-direction: column-reverse;
-    }
 }
 
 /* Global Styles */
 @keyframes fade {
     from {color: white;}
-    to {color: #FF9700}
+    to {
+        color: #FF9700;
+        background-image: linear-gradient(to bottom, transparent 95%, #FF9700 5%);
+    }
 }
 @keyframes buttonfade {
     to {
@@ -54,7 +50,7 @@ body {
     }
 }
 @keyframes grow {
-    to {transform: scale(1.1)}
+    to {transform: scale(1.05)}
 }
 .header,
 .footer {
@@ -67,6 +63,9 @@ body {
 .hero img,
 .image {
     opacity: 0.5;
+}
+.content-container {
+    box-shadow: 0px 4px 8px 0 #898989;
 }
 
 /* Header Styles */
@@ -85,18 +84,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-.nav-buttons * {
+.nav-buttons p {
     display: inherit;
     justify-content: center;
+    align-items: center;
     width: 10%;
     min-width: 1.1in;
+    height: 0.7in;
 }
 .accounts * {
     width: 27%;
     text-align: center;
 }
 .sign-up {
-    border: 2px solid #FF9700;
+    background-color: #FF9700;
     border-radius: 32px;
     padding: 12px 8px;
 }
@@ -111,39 +112,47 @@ body {
     filter: blur(4px);
 }
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: calc(100vw - 17px);
+    min-height: 6in;
+    height: 40vh;
 }
 .content-container {
-    min-width: 5in;
-    min-height: 5in;
-    width: 70vw;
-    height: 60vh;
+    padding: 0 2%;
+    margin: 0 2%;
+    min-width: 3in;
+    width: 10vw;
+    min-height: 4.5in;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #BCBCBC;
+    border-radius: 10px;
+}
+.quote {
     display: inherit;
     justify-content: center;
     align-items: center;
+    min-width: 2.5in;
+    min-height: 1in;
+    width: 5vw;
+    text-align: center;
 }
-.content-container > * {
-    margin: 0 24px;
-}
-.content-container p {
-    width: 25vw;
-}
-#chad {
-    font: bold 24px 'Roboto Mono', monospace;
-    width: 25vw;
+.quote-name {
+    font: bold 20px 'Roboto Mono', monospace;
 }
 .img-box,
 .image {
-    border-radius: 5px;
-    min-width: 3.5in;
-    min-height: 3.5in;
-    width: 20vw;
-    height: 20vw;
+    border-radius: 3px;
+    min-width: 2in;
+    min-height: 2in;
+    width: 10vw;
+    height: 10vw;
 }
 .img-box {
     background-color: #424242;
+    margin: 15% 0 3% 0;
 }
 .image {
     object-fit: cover;
@@ -196,4 +205,7 @@ body {
 }
 .sign-up:hover {
     animation: buttonfade 0.1s linear forwards;
+}
+.content-container:hover {
+    animation: grow 0.1s linear forwards;
 }
