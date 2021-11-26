@@ -2,12 +2,12 @@ from flask import Flask, send_from_directory, render_template
 
 app = Flask(__name__,
             static_url_path='',
-            static_folder='build',
-            template_folder='build')
+            static_folder='../app/build',
+            template_folder='../app/build')
 
 @app.route('/')
 def home():
-    return "Welcome to the Server"
+    return "Welcome to the server side"
 
 @app.route('/header')
 def header():
