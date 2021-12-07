@@ -1,0 +1,50 @@
+.termsofuse,
+.privacypolicy {
+    color: #555555;
+}
+.head h1, 
+.table h3, 
+.terms h3,
+.black {
+    color: black
+}
+.head, 
+.table, 
+.terms {
+    margin: 32px 64px;
+}
+.terms,
+.policies {
+    list-style-type: none;
+}
+.policies li,
+.terms li {
+    margin: 48px 0;
+}
+.square li,
+.terms ul li {
+    margin: 12px 0;
+    list-style: square;
+}
+.privacy-content,
+.term-content {
+    font: 14px 'Roboto', sans-serif;
+}
+.contact {
+    line-height: 4px;
+    font-weight: bold;
+}
+.middle {
+    text-align: center;
+}
+.bordered,
+.bordered tr,
+.bordered th,
+.bordered td {
+    border: 1px solid #555555;
+}
+.bordered tr,
+.bordered th,
+.bordered td {
+    padding: 16px;
+}

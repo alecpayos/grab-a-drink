@@ -5,6 +5,8 @@ import AboutUs from './pages/AboutUs';
 import Header from './pages/Header';
 import Membership from './pages/Membership';
 import Footer from './pages/Footer';
+import TermsOfUse from './pages/Terms';
+import PrivacyPolicy from './pages/Privacy';
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
         <Route exact path='/' element={<Hero />} />
         <Route path='/about-us' element={<AboutUs />} />
         <Route path='' element={<Membership />} />
+        <Route path='/terms' element={<TermsOfUse />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </Router>
