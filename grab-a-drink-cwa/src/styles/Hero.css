@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nixie+One&family=Oswald:wght@200;400;700&display=swap');
+/* Global Settings */
+.header,
+.footer {
+    padding: 24px 116px;
+    background-color: black;
+    font: 200 20px 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Header Settings */
+.header *,
+.center * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.accounts-buttons * {
+    padding: 0 8px;
+}
+.search {
+    background-color: #FCFCFC;
+    border-radius: 32px;
+    padding: 8px 24px;
+}
+.search::after,
+.search::before {
+    display: none;
+}
+/* Hero Settings */
+.heromessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.main-greet {
+    font: bold 30px 'Lobster', cursive;
+}
+.support-greet {
+    font: 48px 'Nixie One', cursive;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about * {
+    margin: 32px 0;
+}
+.enlarge {
+    transform: scale(7);
+    color: #F50057;
+}
+.test {
+    display: flex;
+    justify-content: center;
+}
+
+/* Shop Content Settings */
+.imagedescription {
+    width: 200px;
+}
+
+/* Footer Settings */
+.footer {
+    position: fixed;
+    top: 92.25%;
+}

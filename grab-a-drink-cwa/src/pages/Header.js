@@ -1,26 +1,39 @@
-import { makeStyles } from "@material-ui/core";
-import { Grid } from "@material-ui/core";
+import { Grid, Button, TextField, Input, InputAdornment } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
-const useStyles = makeStyles({
-    heroHeader: {
-        padding: '32px 154px',
-        alignItems: 'center',
-    },
-});
+import LoginIcon from '@mui/icons-material/Login';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import '../styles/Hero.css';
+import { Search } from "@material-ui/icons";
 
 export default function Header () {
-    const style = useStyles();
-
     return (
-        <Grid container className={style.heroHeader}>
-            <Grid item lg={2}><Link to='/'>LOGO</Link></Grid>
-            <Grid item lg={1}><Link to='/'>Home</Link></Grid>
-            <Grid item lg={1}><Link to='/membership'>Membership</Link></Grid>
-            <Grid item lg={1}><Link to='/shop'>Shop</Link></Grid>
-            <Grid item lg={5}><Link to='search'>Searchbar</Link></Grid>
-            <Grid item lg={1}><Link to='/login'>Login</Link></Grid>
-            <Grid item lg={1}><button>cart</button></Grid>
+        <Grid container className="header">
+            <Grid item md={2} lg={2}><Link to='/'>Grab A Drink</Link></Grid>
+            <Grid item md={2} lg={1}><Link to='/'>Overview</Link></Grid>
+            <Grid item md={2} lg={1}><Link to='/membership'>Exclusive Deals</Link></Grid>
+            <Grid item md={2} lg={1}><Link to='/shop'>Our Shop</Link></Grid>
+            <Grid item lg={3} />
+            <Grid item md={2} lg={2}>
+                <Input 
+                className="search"
+                color="secondary"
+                placeholder="Search"
+                fullWidth />
+            </Grid>
+            <Grid 
+            item 
+            md={2} 
+            lg={2}
+            justifyContent="space-evenly">
+                <Button 
+                variant="outlined" 
+                href="/login"
+                endIcon={<LoginIcon />}>Sign In</Button>
+                <Button
+                variant="outlined"
+                endIcon={<ShoppingCartCheckoutIcon />}
+                >Cart</Button>
+            </Grid>
         </Grid>
     );
 };
