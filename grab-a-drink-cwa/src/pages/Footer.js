@@ -1,14 +1,15 @@
 import { Grid } from "@material-ui/core"
 import { Link } from "react-router-dom";
+import '../styles/Hero.css'
 
 export default function Footer () {
     return (
-        <Grid item container>
-            <Grid item lg={1}><Link to='/about-us'>About Us</Link></Grid>
-            <Grid item lg={1}><Link to='/contact'>Contact Us</Link></Grid>
-            <Grid item lg={1}><Link to='/delivery-info'>Delivery Info</Link></Grid>
-            <Grid item lg={1}><Link to='/terms'>Terms of Use</Link></Grid>
-            <Grid item lg={1}><Link to='/privacy-policy'>Privacy Policy</Link></Grid>
+        <Grid container className='footer'>
+            <Grid item lg={1} className='center'><Link to='#about'>About Us</Link></Grid>
+            <Grid item lg={1} className='center'><Link to='/contact'>Contact Us</Link></Grid>
+            <Grid item lg={1} className='center'><Link to='/delivery-info'>Delivery Info</Link></Grid>
+            <Grid item lg={1} className='center'><Link to='/terms'>Terms of Use</Link></Grid>
+            <Grid item lg={1} className='center'><Link to='/privacy-policy'>Privacy Policy</Link></Grid>
         </Grid>
     );
 };

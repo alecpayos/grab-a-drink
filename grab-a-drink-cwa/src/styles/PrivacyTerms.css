@@ -1,17 +1,25 @@
 .termsofuse,
 .privacypolicy {
-    color: #555555;
+    color: #CCCCCC;
+    background-color: #0D0D0D;
 }
 .head h1, 
 .table h3, 
 .terms h3,
 .black {
-    color: black
+    color: white;
 }
-.head, 
-.table, 
+.head {
+    padding: 16px 116px;
+}
+.table {
+    padding: 0 116px;
+} 
 .terms {
-    margin: 32px 64px;
+    padding: 8px 116px 64px 116px;
+}
+.policies {
+    padding-bottom: 32px;
 }
 .terms,
 .policies {
