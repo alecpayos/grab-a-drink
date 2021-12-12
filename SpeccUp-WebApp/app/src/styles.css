@@ -106,8 +106,6 @@ body {
     to {transform: scale(1.05)}
 }
 .header,
-.hero, 
-.hero img,
 .footer {
     width: calc(100vw - 17px);
 }
@@ -115,10 +113,6 @@ body {
 .footer {
     display: grid;
     font: 16px 'Oxygen', sans-serif;
-}
-.hero img,
-.image {
-    opacity: 0.5;
 }
 .content {
     display: grid;
@@ -157,21 +151,8 @@ body {
     width: 27%;
     text-align: center;
 }
-.sign-up {
-    background-color: #FF9700;
-    border-radius: 32px;
-    padding: 12px 8px;
-}
 
 /* Content Styles */
-.hero {
-    background-color: #313451;
-}
-.hero img {
-    height: 100vh;
-    min-height: 10in;
-    filter: blur(4px);
-}
 .content-container {
     padding: 0 2%;
     display: flex;
@@ -200,39 +181,10 @@ body {
 .image {
     object-fit: cover;
 }
-
-/* Footer Styles */
-.footer {
-    background-color: #313451;
-    color: white;
-    height: 8vh;
-    min-height: 1in;
-}
-.footer-banner,
-.legal div {
-    display: flex;
-    align-items: center;
-}
-.links {
-    transform: scale(2);
-    padding-right: 5%;
-}
-.footer-banner {
-    background-color: #25273d;
-    box-shadow: 0 8px 8px 0 #222;
-    justify-content: space-around;
-    min-width: 3in;
-}
-.banner {
-    line-height: 10px;
-}
-.legal {
-    min-width: 7in;
-}
-.legal div {
-    justify-content: space-around;
-    height: 100%;
-    padding: 0 7.5%;
+.feature-content {
+    background-color: #FBFBFB;
+    color: #3e4267;
+    font: 16px 'Oxygen', sans-serif;
 }
 
 /* Hover Settings */
@@ -252,9 +204,6 @@ body {
 .links *:hover,
 .accounts *:hover {
     animation: footerfade 0.05s linear forwards;
-}
-.sign-up:hover {
-    animation: buttonfade 0.1s linear forwards;
 }
 .content-container:hover {
     animation: grow 0.1s linear forwards;
