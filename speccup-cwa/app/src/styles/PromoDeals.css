@@ -1,0 +1,19 @@
+.promo {
+    height: 90.1vh;
+}
+.promo-bg {
+    filter: blur(4px);
+    position: relative;
+    z-index: -1;
+    transform: scale(1.8);
+    opacity: 0.69;
+}
+.promo-message,
+.register-component {
+    color: #222222;
+    align-content: center;
+}
+.register-component {
+    background-image: linear-gradient(to left, white 98%, #BCBCBC);
+    justify-content: center;
+}

@@ -1,0 +1,40 @@
+/* Header Settings */
+.header {
+    justify-content: center;
+    padding: 24px 0;
+    position: fixed;
+    background-color: #313451;
+}
+.header * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+.header-buttons * {
+    padding: 0 16px;
+}
+.sign-up {
+    background-color: #FF9700;
+    padding: 8px 16px;
+    border-radius: 32px;
+}
+
+/* Hero Settings */
+.hero,
+.hero img {
+    height: 100vh;
+}
+.hero {
+    background-color: #313451;
+    box-shadow: 0 8px 16px 0 #313451;
+    position: relative;
+    z-index: -1;
+}
+.hero img {
+    width: calc(100vw - 17px);
+    opacity: 0.5;
+    filter: blur(4px);
+    object-fit: cover;
+}
