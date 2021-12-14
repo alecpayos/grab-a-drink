@@ -1,64 +1,23 @@
-import '../styles/Content.css'
-import Grid from '@material-ui/core/Grid'
-import heroImage from '../assets/feature-images/heroImage.jpg'
-import speed from '../assets/feature-images/speed.png'
-import squat from '../assets/feature-images/squat.png'
-import flex from '../assets/feature-images/flex.png'
-import { Typography } from '@material-ui/core'
-
-const FeatureImages = [speed, squat, flex]
-const FeatureImageAlts = [
-    "marathoner in a running stance",
-    "trainer performing squats",
-    "training coach \"approves\" pose"
-]
-const FeatureImageDescriptions = [
-    "SpeccUp offers a variety of workout plans that are best fitted to your body. Workout plans may vary in intensity and we suggest 3 categories: Light, Moderate, and Intense. Your information will be essential in generating the perfect workout plan.",
-    "Famous artists chose our app in picking out the best exercises for their workout needs. We deliver results like no other through effectiveness and accuracy. Join our routine by signing up as we give out early-bird discounts!",
-    "Famous artists chose our app in picking out the best exercises for their workout needs. We deliver results like no other through effectiveness and accuracy. Join our routine by signing up as we give out early-bird discounts!"
-]
-const FeatureImageClassNames = [
-    "feature-image-one",
-    "feature-image-two",
-    "feature-image-three"
-]
+import React from "react"
+import { Button, Grid, TextField, Typography } from "@mui/material"
+import DatePickers from "./DatePickers"
 
 const Content = () => {
     return (
-        <Grid container>
-            <Grid item className="hero" lg={12}>
-                <img src={heroImage} alt="man on mountain looking over horizon" />
-            </Grid>
-            {FeatureImages.map((image, index) => (
-            <Grid item container className='feature-block' id="features">
-                <Grid item lg={5}><img className={FeatureImageClassNames[index]} src={image} alt={FeatureImageAlts[index]}/></Grid> 
-                <Grid item lg={4}>
-                    <Typography variant="h5">
-                        {FeatureImageDescriptions[index]}
-                    </Typography>
-                </Grid>
-            </Grid>
-            ))}
-            <Grid item container alignItems='center' justifyContent='center'>
-                <Grid container item lg={2}>
-                    <Grid item><p class="quote">“Talent wins games, but teamwork and intelligence wins championships.”</p></Grid>
-                    <Grid item><p class="quote-name">Michael Jordan</p></Grid>
-                </Grid>
-                <Grid container item lg={2}>
-                    <Grid item><p class="quote">"You must not only have competitiveness but ability, regardless of the circumstance you face, to never quit."</p></Grid>
-                    <Grid item><p class="quote-name">Some Asian Guy</p></Grid>
-                </Grid>
-                <Grid container item lg={2}>
-                    <Grid item><p class="quote">"I've used this app in only 4 months... Now I feel... MORE POWERFUL!"</p></Grid>
-                    <Grid item><p class="quote-name">Giga Chad</p></Grid>
-                </Grid>
-                <Grid container item lg={2}>
-                    <Grid item><p class="quote">“If something stands between you and your success, move it. Never be denied.”</p></Grid>
-                    <Grid item><p class="quote-name">Dwayne Johnson</p></Grid>
-                </Grid>
+        <Grid container className="content">
+            <Grid item container sm={7} md={7} lg={5} xl={3} spacing={2} className="form">
+                <Grid item xs={9} sm={9} md={9} lg={10} className="form-headers"><Typography variant="h5">Personal Information</Typography></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" InputLabelProps={{ shrink: true }} label="First Name" placeholder="e.g. Alec"></TextField></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" InputLabelProps={{ shrink: true }} label="Last Name" placeholder="e.g Payos"></TextField></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10}><DatePickers /></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10} className="form-headers"><Typography variant="h5">Physiological Information</Typography></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" InputLabelProps={{ shrink: true }} label="Weight in kg" placeholder="e.g 50" type="number"></TextField></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" InputLabelProps={{ shrink: true }} label="Height in cm" placeholder="e.g 171" type="number"></TextField></Grid>
+                <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" InputLabelProps={{ shrink: true }} label="Age" placeholder="18" type="number"></TextField></Grid>
+                <Grid item lg={12} className="button"><Button variant="contained">Generate Workout</Button></Grid>
             </Grid>
         </Grid>
-    );
+    )
 }
- 
-export default Content;
+
+export default Content
