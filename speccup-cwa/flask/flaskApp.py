@@ -1,12 +1,5 @@
-from datetime import date, datetime
 from flask import Flask, render_template, request
-from sqlalchemy import create_engine, Sequence
 from flask_cors import CORS
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql.functions import func, user
-from sqlalchemy.sql.schema import Column
-from sqlalchemy.sql.sqltypes import TIMESTAMP, Date, String, Integer
 
 app = Flask(__name__,
             static_url_path='',
@@ -45,45 +38,15 @@ def error(e):
     return render_template('index.html')
 
 @app.route('/stream', methods=['GET', 'POST'])
-def dataStream():
-    userFirstName = request.json['userFirstName']
-    userLastName = request.json['userLastName']
-    userBirthDate = request.json['userBirthDate']
-    userWeight = request.json['userWeight']
-    userHeight = request.json['userHeight']
-    userAge = request.json['userAge']
+def processInputs():
+    userFirstName = request.json['firstName']
+    userLastName = request.json['lastName']
+    userBirthdate = request.json['dateValue']
+    userWeight = request.json['weight']
+    userHeight = request.json['height']
+    userAge = request.json['age']
 
-    #expected return is the workout plan
-    bmi = str(float(userWeight) / (float(userHeight) * 0.01) * (float(userHeight) * 0.01))
-    return bmi
-    # def bmiCategory(bmi):
-    #     if bmi < 18:
-    #         return "Underweight"
-    #     elif 18 <= bmi <= 25:
-    #         return "Normal"
-    #     elif 25 <= bmi <= 29.5:
-    #         return "Overweight"
-    #     elif 29.5 <= bmi <= 34.5:
-    #         return "Obese"
-    #     else:
-    #         return "Extremely Obese"
-
-
-    # return "Your Body Mass Index is:\n{0}\n and you category is {1}".format(bmi, bmiCategory(bmi))
-
-    # PostUser = User(
-    #     firstname = userFirstName,
-    #     lastname = userLastName,
-    #     birthdate = userBirthDate,
-    #     weight = userWeight,
-    #     height = userHeight,
-    #     age = userAge,
-    #     timecreated = datetime.now(),
-    #     lastlog = datetime.now()
-    # )
-
-    # session.add(PostUser)
-    # session.commit()
+    return "{0} {1} {2} {3} {4} {5}".format(userFirstName, userLastName, userBirthdate, userWeight, userHeight, userAge)
 
 if __name__ == "__main__":
     app.run() 
