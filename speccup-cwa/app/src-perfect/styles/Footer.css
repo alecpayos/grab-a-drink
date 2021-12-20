@@ -3,11 +3,11 @@
     to {color: #FF9700;}
 }
 .footer {
-    background-color: #313451;
+    background-color: #444871;
     min-height: 1in;
 }
 .footer-banner {
-    background-color: #25273D;
+    background-color: #313451;
     box-shadow: 0 8px 8px 0 #222;
     align-items: center;
     justify-content: center;
@@ -35,4 +35,9 @@
 }
 .icon-links:hover {
     animation: hoverFade 0.05s linear forwards;
+}
+@media screen and (min-width: 0px) and (max-width: 599px) {
+    .footer-links {
+        display: none;
+    }
 }
