@@ -1,12 +1,12 @@
 /* Global Settings */
-.greetings,
+.greetings-container,
 .content,
-.disclaimer,
+.disclaimer-container,
 .hero-image {
     height: calc(100vh - 1in - 64px);
 }
-.disclaimer,
-.greetings {
+.disclaimer-container,
+.greetings-container {
     margin-top: 5%;
 }
 .header *,
@@ -32,6 +32,45 @@
     text-decoration: none;
     color: #FCFCFC;
 }
+
+/* Greetings Settings */
+.greetings-container {
+    align-content: center;
+    justify-content: center;
+    min-height: 8in;
+}
+.greetings {
+    padding: 80px 116px 60px 116px;
+    text-align: center;
+    color: #232323;
+    border: 2px solid white;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 #777;
+}
+.demo-button {
+    text-decoration: none;
+}
+.demo-button button {
+    margin-top: 32px;
+    background-color: #FFA00B;
+    border-radius: 32px;
+}
+.demo-button button:hover {
+    background-color: #EE8D00;
+}
+.demo-button h6 {
+    padding: 8px 24px;
+}
+
+/* Disclaimer Settings */
+.disclaimer-container {
+    align-content: center;
+    justify-content: center;
+}
+.disclaimer {
+    row-gap: 24px;
+}
+
 /* Content Settings */
 .content,
 .hero,
