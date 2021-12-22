@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Button, Grid, TextField, Typography } from "@mui/material"
 import { LocalizationProvider, DesktopDatePicker } from "@mui/lab"
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import { Link } from "react-router-dom"
 
 const Content = () => {
 
@@ -11,7 +12,7 @@ const Content = () => {
     const [ weight, setWeight ] = useState(null)
     const [ height, setHeight ] = useState(null)
     const [ age, setAge ] = useState(null)
-    
+
     const handleInput = {
         newFirstName: function(e) {
             setFirstName(e.target.value)
@@ -51,9 +52,7 @@ const Content = () => {
                 },
                 body: JSON.stringify(inputs)
             })
-            .then(res => res.text())
-            .then(data => console.log(data))
-            .catch(err => console.log("fail", err))
+            .catch(err => console.log("Cannot post due to the following error: ", err))
         }
     }
     
@@ -78,7 +77,7 @@ const Content = () => {
                 <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" onChange={handleInput.newWeight} defaultValue={weight} InputLabelProps={{ shrink: true }} label="Weight in kg" placeholder="e.g 57"></TextField></Grid>
                 <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" onChange={handleInput.newHeight} defaultValue={height} InputLabelProps={{ shrink: true }} label="Height in cm" placeholder="e.g 164"></TextField></Grid>
                 <Grid item xs={9} sm={9} md={9} lg={10}><TextField variant="outlined" onChange={handleInput.newAge} defaultValue={age} InputLabelProps={{ shrink: true }} label="Age" placeholder="e.g 18"></TextField></Grid>
-                <Grid item lg={12} className="button"><Button onClick={handleInput.submitInputs} variant="contained">Generate Workout</Button></Grid>
+                <Grid item lg={12} className="button"><Link to='/speccup-workout-recommendations'><Button onClick={handleInput.submitInputs} variant="contained">Generate Workout</Button></Link></Grid>
             </Grid>
         </Grid>
     )
