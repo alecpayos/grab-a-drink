@@ -2,11 +2,13 @@
 .greetings-container,
 .content,
 .disclaimer,
+.view-results,
 .hero-image {
     height: calc(100vh - 1in - 64px);
     min-height: 8in;
 }
 .disclaimer,
+.view-results,
 .greetings-container {
     margin-top: 1in;
 }
@@ -120,6 +122,9 @@
     align-items: center;
     height: 1in;
 }
+.button a {
+    text-decoration: none;
+}
 .button button {
     background-color: #FF9700;
     border-radius: 32px;
@@ -136,16 +141,21 @@
     color: white;
 }
 
+/* View Results Settings */
+.view-results {
+    align-content: center;
+    justify-content: center;
+}
+.view-results * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Queries */
 @media screen and (min-width: 0px) and (max-width: 599px) {
-    .content {
-        margin-top: 1in;
-    }
     .no-display {
         display: none;
-    }
-    .greetings-container {
-        height: calc(100vh - 1in + 7px);
     }
     .greetings {
         padding: 0 48px;
