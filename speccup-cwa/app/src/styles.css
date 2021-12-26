@@ -1,11 +1,8 @@
 /* Global Settings */
 .greetings-container,
 .content,
-.disclaimer,
-.view-results,
-.hero-image {
+.disclaimer {
     height: calc(100vh - 1in - 64px);
-    min-height: 8in;
 }
 .disclaimer,
 .view-results,
@@ -23,6 +20,9 @@
 }
 .menu {
     transform: scale(1.4);
+}
+.menu * {
+    color: white;
 }
 .header h4:hover,
 .header p:hover,
@@ -43,11 +43,15 @@
 
 /* Greetings Settings */
 .greetings-container {
+    min-height: 6.5in;
     justify-content: center;
     align-content: center;
 }
 .greetings {
     color: #222;
+}
+.greetings h5 {
+    font-size: 1.5rem;
 }
 .demo-button {
     display: flex;
@@ -67,10 +71,14 @@
 .demo-button button:hover {
     background-color: #EE8D00;
 }
+.drawer a {
+    text-decoration: none;
+    color: black;
+}
 
 /* Disclaimer Settings */
 .disclaimer {
-    margin-top: 1in;
+    min-height: 6in;
     justify-content: center;
     align-content: center;
     color: #222;
@@ -81,16 +89,15 @@
 /* Content Settings */
 .hero,
 .hero-image {
-    min-height: 8in;
+    height: calc(100vh - 1in - 64px);
+    width: 100vw;
+    min-height: 6.5in;
 }
 .content {
     margin-top: 1in;
     align-content: center;
     justify-content: center;
-}
-.hero,
-.hero-image {
-    width: 100vw;
+    min-height: 8in;
 }
 .hero {
     position: absolute;
@@ -122,9 +129,6 @@
     align-items: center;
     height: 1in;
 }
-.button a {
-    text-decoration: none;
-}
 .button button {
     background-color: #FF9700;
     border-radius: 32px;
@@ -136,7 +140,7 @@
 
 /* Footer Settings */
 .footer {
-    height: 64px;
+    height: 4em;
     background-color: #1976D2;
     color: white;
 }
@@ -145,11 +149,25 @@
 .view-results {
     align-content: center;
     justify-content: center;
+    color: #333;
+    min-height: calc(100vh - 1in - 64px);
+    padding-top: 16px;
 }
 .view-results * {
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+.plans-container {
+    padding: 32px 0;
+    column-gap: 32px;
+    row-gap: 32px;
+    text-align: center;
+}
+.card {
+    padding: 32px;
+}
+.results-message {
+    text-align: center;
 }
 
 /* Queries */
@@ -157,11 +175,34 @@
     .no-display {
         display: none;
     }
+    .greetings-container,
+    .disclaimer {
+        min-height: 6in;
+        height: calc(100vh - 1in);
+    }
+    .content {
+        min-height: 8in;
+    }
     .greetings {
         padding: 0 48px;
     }
     .disclaimer {
         padding: 0 5%;
+    }
+    .view-results {
+        margin-top: 1.3in;
+        padding: 0 48px;
+        text-align: center;
+    }
+    .view-results h3 {
+        font-size: 48px;
+    }
+    .view-results h4 {
+        font-size: 30px;
+    }
+    .card {
+        height: unset;
+        padding-bottom: 24px;
     }
 }
 @media screen and (min-width: 600px) {
@@ -171,22 +212,47 @@
     .form {
         box-shadow: 0px 4px 8px 0 #666;
     }
-    .greetings-container {
-        height: calc(100vh - 1in - 64px);
-    }
     .greetings {
         border: 2px solid #DEDEDE;
-        padding: 80px 116px 68px 116px;
+        padding: 5em 7.2em 4.4em 7.2em;
         border-radius: 32px;
         box-shadow: 0px 4px 8px 0 #666;
     }
     .disclaimer {
         padding: 0 30%;
     }
+    .view-results h3 {
+        border-radius: 5px;
+        padding: 12px 24px;
+        margin: 16px 0;
+        border: 2px solid #666;
+        box-shadow: 0px 4px 8px 0 #666;
+    }
+    .card {
+        border: 2px solid #666;
+        border-radius: 32px;
+        background-color: #FAFAFA;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 1300px) {
     .disclaimer {
         padding: 0 10%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1420px) {
+    .plans-container {
+        column-gap: unset;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .hero,
+    .hero-image {
+        height: 100vh - 1in;
+    }
+}
+@media screen and (min-width: 1301px) and (max-width: 1700px) {
+    .results-message {
+        padding: 0 192px;
     }
 }
 @keyframes hover {

@@ -1,7 +1,7 @@
 import { AppBar, Grid, Toolbar, Typography } from "@mui/material";
 import heroImage from '../assets/heroImage.jpg'
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import SideDrawer from "./SideDrawer";
 
 const Mask = () => {
     return (
@@ -14,7 +14,7 @@ const Header = () => {
         <AppBar>
             <Toolbar>
                 <Grid container className="header">
-                    <Grid item xs={2} className='menu'><MenuIcon /></Grid>
+                    <Grid item xs={2} className='menu'><SideDrawer /></Grid>
                     <Grid item xs={4} sm={4} md={4} lg={4}><Typography variant="h4"><Link to='/'>SpeccUp</Link></Typography></Grid>
                     <Grid item sm={4} md={4} lg={4} className="no-display">
                         <Link to='/'>Overview</Link>
