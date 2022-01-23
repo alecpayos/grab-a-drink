@@ -13,8 +13,8 @@ from sqlalchemy import (
 
 app = Flask(__name__,
             static_url_path='',
-            static_folder='../app/build',
-            template_folder='../app/build')
+            static_folder='./build',
+            template_folder='./build')
 
 engine = create_engine('postgresql://postgres:alec@localhost:5432/speccup', echo=True)
 Base = declarative_base()
