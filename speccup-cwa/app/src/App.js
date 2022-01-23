@@ -1,22 +1,18 @@
-import './styles.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header, { Mask } from './pages/Header'
-import Content from './pages/Content'
-import Footer from './pages/Footer'
-import Greetings from "./pages/Greetings";
-import Disclaimer from './pages/Disclaimer';
-import ViewRecommendations from './pages/ViewRecommendations';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+// import Content from "./pages/Content";
+// import PromoDeals from "./pages/PromoDeals";
+import Registration from "./pages/Registration";
 
 const App = () => {
     return (
         <Router>
             <Header />
-            <Mask />
             <Routes>
-                <Route exact path='/' element={<Greetings />}/>
-                <Route path='/speccup-demo' element={<Content />}/>
-                <Route path='/disclaimer' element={<Disclaimer />} />
-                <Route path='/speccup-workout-recommendations' element={<ViewRecommendations />} />
+                {/* <Route path='/' element={<Content />} />
+                <Route path='/promo-deals' element={<PromoDeals />} /> */}
+                <Route path='/' element={<Registration />} />
             </Routes>
             <Footer />
         </Router>
