@@ -2,39 +2,108 @@
 /* Global Settings */
 .header,
 .footer {
-    padding: 24px 116px;
+    height: 1in;
+    padding: 0 116px;
     background-color: black;
     font: 200 20px 'Oswald', sans-serif;
     letter-spacing: 2px;
 }
 
 /* Header Settings */
+.drawer svg {
+    transform: scale(1.3);
+}
+.logo {
+    justify-content: left;
+    width: 48px;
+}
 .header *,
-.center * {
+.footer * {
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-decoration: none;
+    text-transform: none;
+    white-space: nowrap;
 }
-.accounts-buttons * {
-    padding: 0 8px;
+.header-links {
+    justify-content: left;
+}
+.header-links button,
+.account-buttons button {
+    margin: 0 8px;
+    font: 200 18px 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    padding: 8px 12px;
+}
+.account-buttons {
+    justify-content: space-evenly;
+}
+.account-buttons button {
+    margin: 0;
+}
+
+
+/* Search Settings */
+.search-container {
+    float: right;
 }
 .search {
+    color: #222;
     background-color: #FCFCFC;
     border-radius: 32px;
-    padding: 8px 24px;
+    width: 90%;
+    height: 0.5in;
 }
-.search::after,
-.search::before {
+.search * {
+    color: #222;
+}
+.search *::after,
+.search *::before {
     display: none;
 }
+
+@media screen and (min-width: 0) and (max-width: 600px) {
+    .search-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 1290px) {
+    .header-links, 
+    .header-links * {
+        display: none;
+    }
+    .logo {
+        justify-content: left;
+    }
+}
+
 /* Hero Settings */
-.heromessage {
-    display: flex;
+.hero {
+    min-height: 90vh;
+    background-color: black;
     justify-content: center;
+    align-content: center;
+}
+.image-container {
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+.hero img {
+    width: 150%;
+}
+.heromessage {
+    justify-content: center;
+    align-content: center;
     color: white;
+}
+.heromessage * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .main-greet {
     font: bold 30px 'Lobster', cursive;
@@ -47,6 +116,9 @@
     align-items: center;
     justify-content: center;
 }
+#about {
+    padding: 0 40px;
+}
 #about * {
     margin: 32px 0;
 }
@@ -54,9 +126,13 @@
     transform: scale(7);
     color: #F50057;
 }
-.test {
+.centerIcons {
     display: flex;
     justify-content: center;
+}
+.reverse {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 /* Shop Content Settings */
@@ -66,6 +142,38 @@
 
 /* Footer Settings */
 .footer {
-    position: fixed;
-    top: 92.25%;
+    white-space: nowrap;
+}
+.footer * {
+    min-width: 1.35in;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 0) and (max-width: 900px) {
+    .header {
+        padding: 0 32px;
+    }
+    .footer {
+        padding: 0 40px;
+        justify-content: center;
+    }
+    .image-container {
+        width: 100%;
+    }
+    .hero img {
+        width: calc(100vw - 17px);
+        height: 60vh;
+        object-fit: cover;
+        position: absolute;
+        top: 30%;
+    }
+    .heromessage {
+        position: relative;
+        z-index: 1;
+    }
+}
+@media screen and (min-width: 1291px) {
+    .drawer {
+        display: none;
+    }
 }

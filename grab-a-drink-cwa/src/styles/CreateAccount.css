@@ -1,0 +1,41 @@
+.creation-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+.registration-form {
+    height: 6in;
+    padding: 16px 24px;
+    box-shadow: 0 4px 16px 0 #555;
+    height: calc(100vh - 3in);
+    align-self: center;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    background-color: white;
+}
+.registration-form * {
+    justify-content: center;
+}
+.input-fields {
+    padding-top: 16px;
+}
+.message-banner {
+    margin-bottom: 16px;
+}
+.banner2 {
+    color: #444;
+}
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+}
+.submit {
+    border-radius: 5px;
+    margin-top: 8px;
+    padding: 12px 48px;
+    font: 200 18px 'Roboto Mono', monospace;
+    border: none;
+    background-color: #E53535;
+    color: #EEE;
+}
