@@ -38,7 +38,7 @@ const Footer = () => {
     return (
         <Row
         style={{ 
-            backgroundColor: colors.primary, 
+            backgroundColor: '#277DCD', 
             padding: '24px 0 16px 0'
         }}>
             <Col

@@ -20,17 +20,37 @@ const { Option } = Select;
 const { Title } = Typography;
 
 const FormButton = ({ name, span, offset, type, handler }) => {
+    const buttonStyles = {
+        next: { 
+            color: colors.textColor.support,
+            backgroundColor: colors.secondary,
+            borderColor: colors.secondary,
+        },
+        back: {
+            borderColor: colors.secondary,
+            color: colors.textColor.secondary
+        }
+    }
     return (
         <Col 
             span={span}
             offset={offset}
             style={{ 
                 display: 'flex', 
-                justifyContent: 'right' 
+                justifyContent: 'right'
             }}
         >
             <Form.Item>
-                <Button htmlType={type} onClick={handler}>
+                <Button 
+                    htmlType={type} 
+                    onClick={handler}
+                    size='large'
+                    style={
+                        name === "Next"
+                        ? buttonStyles.next
+                        : buttonStyles.back
+                    }
+                >
                     {name}
                 </Button>
             </Form.Item>
@@ -454,12 +474,12 @@ const SubscriptionInformation = ({ onChange, render, memory }) => {
 
     return (
         <Col
-        xs={{ span: 22, offset: 1 }}
-        sm={{ span: 20, offset: 2 }}
-        md={{ span: 16, offset: 4 }}
-        lg={{ span: 12, offset: 6 }}
-        xl={{ span: 8, offset: 8 }}
-        xxl={{ span: 6, offset: 9 }}
+            xs={{ span: 22, offset: 1 }}
+            sm={{ span: 20, offset: 2 }}
+            md={{ span: 16, offset: 4 }}
+            lg={{ span: 12, offset: 6 }}
+            xl={{ span: 8, offset: 8 }}
+            xxl={{ span: 6, offset: 9 }}
         >
             <Form 
                 form={form} 
