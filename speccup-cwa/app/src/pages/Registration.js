@@ -13,7 +13,7 @@ import {
     SubscriptionInformation
     } from '../components/forms';
 
-const Registration = () => {
+const Registration = ({ options }) => {
     const { Step } = Steps;
     const [ formSelector, setFormSelector ] = useState(0);
     const [ userBasicInfo, setUserBasicInfo ] = useState({});
@@ -25,26 +25,43 @@ const Registration = () => {
     const handleAccountData = accountInfo => setUserAccountInfo(accountInfo);
     const handleSubscriptionData = subscriptionInfo => setUserSubscriptionInfo(subscriptionInfo);
 
+    const componentHeight = () => {
+        switch(formSelector) {
+            case 0:
+                return '6.5in'
+            case 1:
+                return '6.5in'
+            case 2:
+                return '7.5in'
+        }
+    }
+
     const Forms = () => {
         switch(formSelector) {
             case 0:
-                return <BasicInformation 
-                            onChange={handleBasicData} 
-                            render={formRenderer} 
-                            memory={userBasicInfo} 
-                        />
+                return (
+                    <BasicInformation 
+                        onChange={handleBasicData} 
+                        render={formRenderer} 
+                        memory={userBasicInfo} 
+                    />
+                )
             case 1:
-                return <AccountInformation 
-                            onChange={handleAccountData} 
-                            render={formRenderer} 
-                            memory={userAccountInfo} 
-                        />
+                return (
+                    <AccountInformation 
+                        onChange={handleAccountData} 
+                        render={formRenderer} 
+                        memory={userAccountInfo} 
+                    />        
+                )
             case 2:
-                return <SubscriptionInformation 
-                            onChange={handleSubscriptionData} 
-                            render={formRenderer} 
-                            memory={userSubscriptionInfo} 
-                        />
+                return (
+                    <SubscriptionInformation 
+                        onChange={handleSubscriptionData} 
+                        render={formRenderer} 
+                        memory={userSubscriptionInfo} 
+                    />
+                )
             default:
                 return null
         }
@@ -78,9 +95,15 @@ const Registration = () => {
     }
 
     return (
-        <div style={{ height: 'calc(100vh - 0.5in - 24px - 40px - 0.5in - 1.4in)' }}>
+        <div style={{ height: 'calc(100vh - 2.31in)', minHeight: componentHeight() }}>
             <Row
-            style={{ height: '0.7in', alignContent: 'center' }}>
+                style={{ 
+                    height: '1.7in', 
+                    alignContent: 'center', 
+                    paddingTop: '1in',
+                    display: options
+                    }}
+                >
                 <Col 
                 xs={{ span: 0 }}
                 lg={{ span: 18, offset: 3 }}
@@ -90,7 +113,12 @@ const Registration = () => {
                 </Col>    
             </Row> 
 
-            <Row>
+            <Row
+            style={{ 
+                height: 'calc(100vh - 3in)', 
+                minHeight: '6in',
+            }}
+            >
                 <Forms />
             </Row>
         </div>
